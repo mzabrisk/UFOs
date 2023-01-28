@@ -15,28 +15,28 @@ The website is a great start for allowing someone interested in the topic to sea
 The table can be filtered by Date, City, State, Country, Shape, or combination of those options.
 
 #### Unfiltered Table
-![]()
+![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/unfiltered_table.png)
 
 #### Table with One Filter Applied
 The following screen shot shows the table with a single filtered applied. The "Date" filter has been set to "1/12/2010".
-![]()
+![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/single_filter_table.png)
 
 #### Table with Multiple Filters Applied
 The following screen shot shows the table with two filters applied. In addition to the above date filter, the "State" filter has been set to "or" for Oregon. Although the process is shown using only two filters, it is possible to filter on all 5 categories simultaneously.
-![]()
+![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/multi_filter_table.png)
 
 
 The ability of the website to allow for the research to apply ultiple filters simultaneously is a really handy feature, since it will allow them to slowly drill into the data by adding or removing filters until they are able to see the data they are interested.
 
 ### The Code Behind the Filters
 The following line of code listens for a change in the input boxes on the website:
-![]()
+![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/d3selectAll.png)
 
 Once a change is detected, the updateFilters function is called, which uses the input changes on the website to update the "filters" object.
-![]()
+![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/updateFilters.png)
 
 The last line in the updateFilters function calls the filterTable funciton, which loops through the "filters" object, applying the filters to the data, and updating the table on the website by calling the buildTable function on the filtered data.
-![]()
+![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/filterTable.png)
 
 
 ## Summary
