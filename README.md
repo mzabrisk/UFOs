@@ -35,12 +35,12 @@ The following line of code listens for a change in the input boxes on the websit
 
 ![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/d3selectAll.png)
 
-Once a change is detected, the updateFilters function is called, which uses the input changes on the website to update the "filters" object.
+Once a change is detected, the **updateFilters** function is called, which uses the input changes on the website to update the **filters** object.
 
 
 ![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/updateFilters.png)
 
-The last line in the updateFilters function calls the filterTable funciton, which loops through the "filters" object, applying the filters to the data, and updating the table on the website by calling the buildTable function on the filtered data.
+The last line in the **updateFilters** function calls the **filterTable** funciton, which loops through the **filters** object, applying the filters to the data, and updating the table on the website by calling the **buildTable** function on the filtered data.
 
 
 ![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/filterTable.png)
@@ -54,7 +54,7 @@ The biggest drawback is the need to be very specific with how the search criteri
 There are a couple areas in which I would recommend further development:
 - The data needs to be cleaned. The Date, City, State, Country, and Shape columns seem to be in good order, but the Duration column includes different units and formats. Getting this into a uniform format would also enable filtering on this data. Additionally, although it isn't data that you would want to filter on, the Comments column could also use cleaning. Currently, ASCII characters are present in a number of locations.
 - There are a couple of options to make the search more user friendly:
-    - They could be setup so that they predictively provide search suggestions based on what you have entered, and the values present in the table. For example, if in the City search, the user typed "fre", the search would suggest "fresno" and any other options that match what has been typed so for. This would be particularly useful for the Canadian observations, where the city is listed as "<city> (canada)".
+    - They could be setup so that they predictively provide search suggestions based on what you have entered, and the values present in the table. For example, if in the City search, the user typed "fre", the search would suggest "fresno" and any other options that match what has been typed so for. This would be particularly useful for the Canadian observations, where the city is listed as "*city* (canada)".
     - It might be possible to create a basic and advanced search option where the basic search was just a single input box that could search on any of the columns. It could be setup using regex so that the input was categorized into one of the existing input options, and the corresponding column are sorted accordingly. It could also be setup so that the value was searched for across all the columns and any matches, regardless of column, would be returned. The advanced search would be setup similarly to how the current search is arranged, which allows users to search using multiple filters simultaneously. 
 
 ## Submission Sumary:
