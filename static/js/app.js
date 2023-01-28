@@ -52,11 +52,7 @@ function updateFilters() {
  
     // 6. Call function to apply all filters and rebuild the table
     filterTable();
-  
   }
-  console.log(filters);
-  console.log(filters.values);
-  console.log(tableData.length);
 
   // 7. Use this function to filter the table when data is entered.
   function filterTable() {
@@ -64,7 +60,6 @@ function updateFilters() {
     // 8. Set the filtered data to the tableData.
     let filteredData = tableData;
     
-  
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
 
@@ -87,10 +82,8 @@ function updateFilters() {
       }
     });
 
-  
     // 10. Finally, rebuild the table using the filtered data
     buildTable(filteredData)
-    
   };
   
   // 2. Attach an event to listen for changes to each filter
