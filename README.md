@@ -1,10 +1,5 @@
 # UFOs
 
-### Submission Sumary:
-index.html: file in parent github file
-app.js: static --> js --> app.js
-data.js: static --> js --> data.js
-
 ## Project Overview
 We were recruited to help our friend Dana build a webpage - particularly to help by building a filter-able table using JavaScript - to host an article, and the corresponding data, on UFO sightings. The table contains dates, locations (city, state, and country), shape of the observed objected, duration of the sighting, and additional comments relating to the observation. The table can be filtered by Date, City, State, Country, and Shape.
 
@@ -15,14 +10,20 @@ The website is a great start for allowing someone interested in the topic to sea
 The table can be filtered by Date, City, State, Country, Shape, or combination of those options.
 
 #### Unfiltered Table
+
+
 ![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/unfiltered_table.png)
 
 #### Table with One Filter Applied
 The following screen shot shows the table with a single filtered applied. The "Date" filter has been set to "1/12/2010".
+
+
 ![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/single_filter_table.png)
 
 #### Table with Multiple Filters Applied
 The following screen shot shows the table with two filters applied. In addition to the above date filter, the "State" filter has been set to "or" for Oregon. Although the process is shown using only two filters, it is possible to filter on all 5 categories simultaneously.
+
+
 ![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/multi_filter_table.png)
 
 
@@ -30,12 +31,18 @@ The ability of the website to allow for the research to apply ultiple filters si
 
 ### The Code Behind the Filters
 The following line of code listens for a change in the input boxes on the website:
+
+
 ![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/d3selectAll.png)
 
 Once a change is detected, the updateFilters function is called, which uses the input changes on the website to update the "filters" object.
+
+
 ![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/updateFilters.png)
 
 The last line in the updateFilters function calls the filterTable funciton, which loops through the "filters" object, applying the filters to the data, and updating the table on the website by calling the buildTable function on the filtered data.
+
+
 ![](https://github.com/mzabrisk/UFOs/blob/5518d9238451cfe6fc0f6a844168652fcec45da9/writeup_docs/filterTable.png)
 
 
@@ -49,3 +56,12 @@ There are a couple areas in which I would recommend further development:
 - There are a couple of options to make the search more user friendly:
     - They could be setup so that they predictively provide search suggestions based on what you have entered, and the values present in the table. For example, if in the City search, the user typed "fre", the search would suggest "fresno" and any other options that match what has been typed so for. This would be particularly useful for the Canadian observations, where the city is listed as "city (canada)".
     - It might be possible to create a basic and advanced search option where the basic search was just a single input box that could search on any of the columns. It could be setup using regex so that the input was categorized into one of the existing input options, and the corresponding column as sorted accordingly. It could also be setup so that the value was searched for across all the columns and any matches, regardless of column, would be returned. The advanced search would be setup similarly to how the current search is arranged, which allows users to search using multiple filters simultaneously. 
+
+## Submission Sumary:
+- index.html: file in parent github file
+
+
+- app.js: static --> js --> app.js
+
+
+- data.js: static --> js --> data.js
